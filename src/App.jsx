@@ -1,5 +1,6 @@
 import PortfolioImage from "../src/assets/gray.jpg";
 // import Podcast from "../src/assets/podcast.jpg";
+import { FaGithub, FaLinkedin, FaReact, FaNodeJs } from "react-icons/fa";
 
 const App = () => {
   const projects = [
@@ -24,8 +25,8 @@ const App = () => {
   ];
   return (
     <>
-      <main className="bg-gray-700 text-white font-Poppins">
-        <div className="h-dvh max-w-7xl mx-auto">
+      <main className="bg-gray-800 text-white font-Poppins">
+        <div className="h-dvh max-w-7xl mx-auto p-5">
           <header className="h-[10vh]">
             <div className="w-full rounded-xl flex flex-row justify-between h-full items-center">
               <h1 className="text-3xl font-bold ">MHailay,</h1>
@@ -38,7 +39,7 @@ const App = () => {
               </div>
             </div>
           </header>
-          <div className="h-[90vh] grid grid-cols-5 grid-rows-2">
+          <div className="h-[90vh] grid grid-cols-5 grid-rows-2 gap-3">
             <div className="rounded-xl col-span-2 flex flex-col justify-end items-end shadow-lg shadow-gray-400 p-4">
               <h1 className="text-4xl font-bold ">Mulugeta Hailay</h1>
               <h1 className="text-3xl font-semibold text-gray-200 flex justify-center items-center">
@@ -58,29 +59,32 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-700 max-w-7xl mx-auto" id="projects">
+        <div
+          className="bg-gray-800 max-w-7xl mx-auto flex flex-col gap-10 rounded-xl"
+          id="projects"
+        >
           <div className="h-[10vh]">
             <div className="w-full rounded-xl flex flex-row justify-between h-full items-center">
               <h1 className="text-3xl font-bold ">PROJECTS</h1>
             </div>
           </div>
           {projects.map((project, index) =>
-            index !== 1 ? (
+            index == 1 ? (
               <div
                 key={index}
-                className="bg-gray-700 h-[90vh] grid grid-cols-5 grid-rows-2"
+                className="bg-gray-700 h-[90vh] grid grid-cols-5 grid-rows-2 rounded-xl"
               >
+                <div className="rounded-xl col-span-2 flex flex-col justify-end items-start shadow-lg shadow-gray-400 p-4 rounded-xl">
+                  <h1 className="text-3xl font-semibold text-gray-200 flex justify-center items-start">
+                    {project.name}
+                  </h1>
+                </div>
                 <div className="rounded-xl row-span-2 col-span-3 flex justify-center items-center p-5">
                   <img
                     src={PortfolioImage}
                     alt="Portfolio Image"
                     className="rounded-xl shadow-xl shadow-gray-500 object-cover"
                   />
-                </div>
-                <div className="rounded-xl col-span-2 flex flex-col justify-end items-start shadow-lg shadow-gray-400 p-4">
-                  <h1 className="text-3xl font-semibold text-gray-200 flex justify-center items-start">
-                    {project.name}
-                  </h1>
                 </div>
                 <div className="rounded-xl col-span-2 flex flex-col justify-start items-end p-4">
                   <h2 className="text-2xl">{project.description}</h2>
@@ -89,22 +93,27 @@ const App = () => {
             ) : (
               <div
                 key={index}
-                className="bg-gray-700 h-[90vh] grid grid-cols-5 grid-rows-2"
+                className="bg-gray-700 h-[90vh] grid grid-cols-5 grid-rows-2 rounded-xl"
               >
-                <div className="rounded-xl col-span-2 flex flex-col justify-end items-start shadow-lg shadow-gray-400 p-4">
-                  <h1 className="text-3xl font-semibold text-gray-200 flex justify-center items-start">
-                    {project.name}
-                  </h1>
-                </div>
                 <div className="rounded-xl row-span-2 col-span-3 flex justify-center items-center p-5">
                   <img
-                    src={PortfolioImage}
+                    src={project.imageUrl}
                     alt="Portfolio Image"
                     className="rounded-xl shadow-xl shadow-gray-500 object-cover"
                   />
                 </div>
-                <div className="rounded-xl col-span-2 flex flex-col justify-start items-end p-4">
+                <div className="rounded-xl col-span-2 flex flex-col justify-end items-start shadow-lg shadow-gray-400 p-4">
+                  <h1 className="text-3xl font-semibold text-gray-200 flex justify-center items-start">
+                    {index}
+                    {project.name}
+                  </h1>
+                </div>
+                <div className="rounded-xl col-span-2 flex flex-col justify-start items-start p-4">
                   <h2 className="text-2xl">{project.description}</h2>
+                  <div className="flex flex-row gap-5">
+                    <FaReact size={40} className="bg-red" />
+                    <FaNodeJs size={40} />
+                  </div>
                 </div>
               </div>
             )
@@ -112,6 +121,10 @@ const App = () => {
         </div>
         <div className="h-80 w-full">
           <div className="">About Me</div>
+          <div>
+            <FaGithub size={50} />
+            <FaLinkedin size={50} />
+          </div>
         </div>
       </main>
     </>
