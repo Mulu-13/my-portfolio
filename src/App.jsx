@@ -1,4 +1,6 @@
 import PortfolioImage from "../src/assets/gray.jpg";
+import MyRest from "../src/assets/my-rest.jpg";
+import Podcast from "../src/assets/podcast.jpg";
 import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -6,19 +8,19 @@ const App = () => {
   const projects = [
     {
       name: "Music Album Mobile Application",
-      imageUrl: "../src/assets/my-rest.jpg",
+      imageUrl: "./assets/my-rest.jpg",
       description:
         "Developed a mobile application for “ዕረፍተይ - My rest” at the artist's request. This project demonstrated my proficiency in mobile app development and audio integration using Flutter and the just_audio package.",
     },
     {
       name: "Podcast App",
-      imageUrl: "../src/assets/podcast.jpg",
+      imageUrl: "./assets/podcast.jpg",
       description:
         "Developed with Flutter for a seamless user experience, and powered by Node.js with Express.js and MongoDB on the backend, this app enables users to effortlessly upload and listen to podcasts.",
     },
     {
       name: "Expense Tracker",
-      imageUrl: "../src/assets/gray.jpg",
+      imageUrl: "./assets/gray.jpg",
       description:
         "Built an expense tracker web app using the MERN stack (MongoDB,Express.js, React, Node.js) for Timeless Technologies Plc. This application allows the company to efficiently manage their finances by tracking expense",
     },
