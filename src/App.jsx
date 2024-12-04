@@ -6,19 +6,19 @@ const App = () => {
   const projects = [
     {
       name: "Music Album Mobile Application",
-      imageUrl: "src/assets/my-rest.jpg",
+      imageUrl: "../src/assets/my-rest.jpg",
       description:
         "Developed a mobile application for “ዕረፍተይ - My rest” at the artist's request. This project demonstrated my proficiency in mobile app development and audio integration using Flutter and the just_audio package.",
     },
     {
       name: "Podcast App",
-      imageUrl: "src/assets/podcast.jpg",
+      imageUrl: "../src/assets/podcast.jpg",
       description:
         "Developed with Flutter for a seamless user experience, and powered by Node.js with Express.js and MongoDB on the backend, this app enables users to effortlessly upload and listen to podcasts.",
     },
     {
       name: "Expense Tracker",
-      imageUrl: "src/assets/gray.jpg",
+      imageUrl: "../src/assets/gray.jpg",
       description:
         "Built an expense tracker web app using the MERN stack (MongoDB,Express.js, React, Node.js) for Timeless Technologies Plc. This application allows the company to efficiently manage their finances by tracking expense",
     },
@@ -28,7 +28,7 @@ const App = () => {
     <>
       <main className="bg-gray-800 text-white font-Poppins">
         <div className="h-dvh max-w-7xl mx-auto p-5">
-          <header className="h-[10vh]">
+          <header className="h-[10vh] sticky top-0">
             <div className="w-full rounded-xl flex flex-row justify-between h-full items-center">
               <h1 className="text-3xl font-bold ">MHailay,</h1>
               <div className="flex flex-row gap-5">
@@ -111,7 +111,7 @@ const App = () => {
                 <div className="rounded-xl row-span-2 col-span-3 flex justify-center items-center p-5">
                   <img
                     src={project.imageUrl}
-                    alt="Portfolio Image"
+                    alt={project.name}
                     className="rounded-xl shadow-xl shadow-gray-500 object-cover p-5"
                   />
                 </div>
@@ -137,7 +137,7 @@ const App = () => {
                 <div className="rounded-xl w-full md:row-span-2 md:col-span-3 flex justify-center items-center p-5">
                   <img
                     src={project.imageUrl}
-                    alt="Portfolio Image"
+                    alt={project.name}
                     className="rounded-xl shadow-xl shadow-gray-500 h-full w-full object-contain "
                   />
                 </div>
