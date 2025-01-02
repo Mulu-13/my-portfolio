@@ -114,7 +114,7 @@ const App = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.name}
-                    className="rounded-xl shadow-xl shadow-gray-500 object-cover p-5"
+                    className="rounded-xl shadow-xl shadow-gray-500 w-full h-full object-contain p-5"
                   />
                 </div>
                 <div className="rounded-xl col-span-2 flex flex-col justify-start items-end p-4">

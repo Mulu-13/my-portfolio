@@ -17,7 +17,7 @@ const Projects = () => {
     },
     {
       name: "Expense Tracker",
-      imageUrl: "src/assets/gray.jpg",
+      imageUrl: "src/assets/expense.png",
       description:
         "Built an expense tracker web app using the MERN stack (MongoDB,Express.js, React, Node.js) for Timeless Technologies Plc. This application allows the company to efficiently manage their finances by tracking expense",
     },
@@ -53,9 +53,9 @@ const Projects = () => {
                 {project.name}
               </h1>
             </div>
-            <div className="rounded-xl row-span-2 col-span-3 flex justify-center items-center p-5">
+            <div className="rounded-xl row-span-2 col-span-3 h-full w-full flex justify-center items-center p-5">
               <img
-                src="src/assets/gray.jpg"
+                src={project.imageUrl}
                 alt="Portfolio Image"
                 className="rounded-xl shadow-xl shadow-gray-500 object-cover"
               />
@@ -68,7 +68,7 @@ const Projects = () => {
           <motion.div
             initial={{ scale: 0.5, x: i % 2 ? 500 : -500 }}
             whileInView={{
-              scale: 1,
+              scale: 0,
               x: 0,
               transition: {
                 duration: 1,
