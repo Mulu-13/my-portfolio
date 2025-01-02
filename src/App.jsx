@@ -140,7 +140,7 @@ const App = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.name}
-                    className="rounded-xl shadow-xl shadow-gray-500 h-full w-full object-contain "
+                    className="rounded-xl shadow-xl shadow-gray-500 h-full w-full object-contain p-5"
                   />
                 </div>
                 <div className="rounded-xl col-span-2 flex flex-col justify-end items-start shadow-lg shadow-gray-400 p-4">
