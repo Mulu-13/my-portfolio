@@ -1,6 +1,7 @@
 import PortfolioImage from "../src/assets/gray.jpg";
 import MyRest from "../src/assets/my-rest.jpg";
 import Podcast from "../src/assets/podcast.jpg";
+import Expense from "../src/assets/expense.png";
 import { FaGithub, FaLinkedin, FaTelegram, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -20,7 +21,7 @@ const App = () => {
     },
     {
       name: "Expense Tracker",
-      imageUrl: PortfolioImage,
+      imageUrl: Expense,
       description:
         "Built an expense tracker web app using the MERN stack (MongoDB,Express.js, React, Node.js) for Timeless Technologies Plc. This application allows the company to efficiently manage their finances by tracking expense",
     },
